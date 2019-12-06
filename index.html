@@ -14,6 +14,8 @@ body {
   max-width: 600px;
   background: #232323;
 }
+
+/* Div for each food item (not for the invisible blocker to fix animation)*/
 div {
   height: 300px;
   background-size: cover;
@@ -21,6 +23,8 @@ div {
   margin: 0;
   border-radius: 12px;
 }
+
+/* Bourbon title at top of page*/
 h1 {
   font-family: 'Anton', sans-serif;
   text-align: center;
@@ -28,12 +32,16 @@ h1 {
   color: #aaaaaa;
   margin: 30px 0 0 0;
 }
+
+/* "Americana Fusion" text*/
 h2 {
   text-align: center;
   color: #bbbbbb;
   margin: -15px 0 50px 0;
   font-family: 'Bowlby One SC', cursive;
 }
+
+/* Food names for each item */
 p {
   color: rgba(255,255,255,1);
   background: black;
@@ -53,6 +61,7 @@ p {
 
 }
 
+/* Description of each dish */
 small {
   opacity: 0;
   transition: opacity .75s;
@@ -60,38 +69,52 @@ small {
   -moz-transition: opacity .75s;
 }
 
+/* this is a div that blocks the opaque div with the food description from showing up early in the animation */
 .small-blocker {
   background-color: #232323;
   height: 30px;
   position: relative;
 }
 
+/* */
 .show-description p{
-  height: 120px;
+  height: 20px;
 }
 
 .show-description small{
   opacity: 1;
 }
 
+/* Meatballs */
 .first{
   background-image: url("https://i.imgur.com/I2lIK5s.jpg");
 }
+
+/* Brussels*/
 .second{
   background-image: url("https://i.imgur.com/GA9TkNi.jpg");
 }
+
+/* Sliders*/
 .third{
   background-image: url("https://i.imgur.com/YV89OOo.jpg");
 }
+
+/* Ice Cream*/
 .dessert{
   background-image: url("https://i.imgur.com/MR8xRtB.jpg");
 }
+
+/* Churro*/
 .dessert-second{
   background-image: url("https://i.imgur.com/w0gSEC0.jpg");
 }
+
 .price {
   float: right;
 }
+
+/* To optimize for mobile but doesn't seem to work as expected */
 @media (max-width: 500px) {
   h1 {
     font-size: 50px;
@@ -135,19 +158,19 @@ small {
 
 <div class="third show-description">
   <p>Korean Beef Sliders<span class="price">$15</span><br />
-  <small>Warm naan, pickled veggies, sriracha mayo, sesame. We also have our own special kimchi, made from a local ajuma that loves food as much as we do. Feeds 1-2 people.</small></p>
+  <small>Warm naan, pickled veggies, sriracha mayo, sesame. We also have our own special kimchi, made from a local ajuma that loves food as much as we do. And each patty is cooked in a special gochujang sauce. Feeds 1-2 people.</small></p>
 </div>
 <div class="small-blocker"></div>
 
 <div class="dessert show-description">
   <p>Fried Ice Cream<span class="price">$10</span><br />
-  <small>We hand-churn our own ice cream, created our own signature bourbon flavor, and lovingly fry each scoop so that your mouth doesn't know what to do when it takes a bite. Feeds 1-3 people.</small></p>
+  <small>We hand-churn our own ice cream, created our own signature bourbon flavor, and lovingly fry each scoop so that your mouth doesn't know what to do when it takes a bite. A perfect ending to a good meal. Feeds 1-3 people.</small></p>
 </div>
 <div class="small-blocker"></div>
 
 <div class="dessert-second show-description">
   <p>Fried Churros<span class="price">$8</span><br />
-  <small>Inspired from the classic Bojack episode. This churro may not be free, but it'll be exactly what you need on a day where you need a pick-me-up. Feeds 2-4 people.</small></p>
+  <small>Inspired from the classic Bojack episode. This churro may not be free, but it'll be exactly what you need on a day where you need a pick-me-up. Guaranteed to not make anyone cry. Feeds 2-4 people.</small></p>
 </div>
 <div class="small-blocker"></div>
 
