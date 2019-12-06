@@ -54,18 +54,45 @@ p {
   position: absolute;
   bottom: 0;
   margin: 0;
-  height: 30px;
+  height: 120px;
   transition: height .5s;
   -webkit-transition: height .5s;
   -moz-transition: height .5s;
 }
 
+
+
 /* Description of each dish */
 small {
-  opacity: 0;
+  opacity: 1;
   transition: opacity .75s;
   -webkit-transition: opacity .75s;
   -moz-transition: opacity .75s;
+}
+
+/* Recommended size for sharing */
+feedingSize {
+  float: right;
+  font-family: 'Anton';
+  display: inline-block;
+  position: relative;
+  top: 17%;
+}
+
+/* Arrow to let user know to click pictures of food */
+arrow {
+  border: solid #bbbbbb;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  left: 50%;
+  top: 10%;
+  position: absolute;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transition: transform .75s;
+  transition: top .25s;
 }
 
 /* this is a div that blocks the opaque div with the food description from showing up early in the animation */
@@ -77,12 +104,22 @@ small {
 
 /* Start food div (description included) with a height of 120px*/
 .show-description p{
-  height: 110px;
+  height: 30px;
 }
 
 /* Start description with an opacity of 1 */
 .show-description small{
-  opacity: 1;
+  opacity: 0;
+}
+
+/* rotates arrow to show user to  */
+.show-description arrow{
+  top: 40%;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  transition: transform .75s;
+  transition: top .75s;
 }
 
 /* Meatballs */
@@ -112,11 +149,6 @@ small {
 
 /* price of each dish */
 .price {
-  float: right;
-}
-
-/* Recommended size for sharing */
-.feedingSize {
   float: right;
 }
 
@@ -151,37 +183,37 @@ small {
 <h2>Americana Fusion</h2>
 <!--Meatballs -->
 <div class="first show-description">
-  <p>Meatballs<span class="price">$12</span><br />
-  <small>Marinara, shaved parm. Using a special blend of three different cuts of beef as well as our own house blend of spices, these meatballs pack a punch. Designed to leave you satisfied. Chef favorite.<span class="feedingSize">Feeds 2-4 people</span></small></br></p>
+  <p>Meatballs<arrow></arrow><span class="price">$12</span><br />
+  <small>Marinara, shaved parm. Using a special blend of three different cuts of beef as well as our own house blend of spices, these meatballs pack a punch. Designed to leave you satisfied. Chef favorite.<feedingSize>Feeds 2-4 people</feedingSize></small></br></p>
 </div>
 <!-- This is so the text in 'small' (food description) has something to hide behind as the animation kicks in -->
 <div class="small-blocker"></div>
 
 <!--Brussels -->
 <div class="second show-description">
-  <p>Crispy Brussels<span class="price">$12</span><br />
-  <small>Truffle aioli, parm. Made with our special batter to deliver a whole new type of flavor. Comes with our special, zesty dipping sauce that's made in-house with 11 different herbs and spices. A crowd-pleaser.<span class="feedingSize">Feeds 2-3 people</span></small></p>
+  <p>Crispy Brussels<arrow></arrow><span class="price">$12</span><br />
+  <small>Truffle aioli, parm. Made with our special batter to deliver a whole new type of flavor. Comes with our special, zesty dipping sauce that's made in-house with 11 different herbs and spices. A crowd-pleaser.<feedingSize>Feeds 2-3 people</feedingSize></small></p>
 </div>
 <div class="small-blocker"></div>
 
 <!--Sliders -->
 <div class="third show-description">
-  <p>Korean Beef Sliders<span class="price">$15</span><br />
-  <small>Warm naan, pickled veggies, sriracha mayo, sesame. We also have our own special kimchi, made from a local ajuma that loves food as much as we do. And each patty is cooked in a special gochujang sauce.<span class="feedingSize">Feeds 2-3 people</span></small></p>
+  <p>Korean Beef Sliders<arrow></arrow><span class="price">$15</span><br />
+  <small>Warm naan, pickled veggies, sriracha mayo, sesame. We also have our own special kimchi, made from a local ajuma that loves food as much as we do. And each patty is cooked in a special gochujang sauce.<feedingSize>Feeds 2-3 people</feedingSize></small></p>
 </div>
 <div class="small-blocker"></div>
 
 <!--Ice cream -->
 <div class="dessert show-description">
-  <p>Fried Ice Cream<span class="price">$10</span><br />
-  <small>We hand-churn our own ice cream, created our own signature bourbon flavor, and lovingly fry each scoop so that your mouth doesn't know what to do when it takes a bite. A perfect ending to a good meal.<span class="feedingSize">Feeds 2-3 people</span></small></p>
+  <p>Fried Ice Cream<arrow></arrow><span class="price">$10</span><br />
+  <small>We hand-churn our own ice cream, created our own signature bourbon flavor, and lovingly fry each scoop so that your mouth doesn't know what to do when it takes a bite. A perfect ending to a good meal.<feedingSize>Feeds 2-3 people</feedingSize></small></p>
 </div>
 <div class="small-blocker"></div>
 
 <!--Churros -->
 <div class="dessert-second show-description">
-  <p>Fried Churros<span class="price">$8</span><br />
-  <small>Inspired from the classic Bojack episode. This churro may not be free, but it'll be exactly what you need on a day where you need a pick-me-up. Guaranteed to not make anyone cry.<span class="feedingSize">Feeds 2-3 people</span></small></p>
+  <p>Fried Churros<arrow></arrow><span class="price">$8</span><br />
+  <small>Inspired from the classic Bojack episode. This churro may not be free, but it'll be exactly what you need on a day where you need a pick-me-up. Handmade filling and our own special blend of spices, this fried dish is guaranteed to not make anyone cry.<feedingSize>Feeds 2-3 people</feedingSize></small></p>
 </div>
 <div class="small-blocker"></div>
 
