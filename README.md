@@ -3,4 +3,4 @@ This is a sample menu using JavaScript and CSS animation. Click on the pictures 
 
 To see the page live, go to:
 
-https://borbouns-menu.netlify.com/
+https://bourbons-menu.netlify.com
